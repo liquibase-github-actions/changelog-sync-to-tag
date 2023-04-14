@@ -6,7 +6,7 @@ Marks all undeployed changesets as executed, up to a tag
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/changelog-sync-to-tag@v4.21.0
+- uses: liquibase-github-actions/changelog-sync-to-tag@v4.21.1
   with:
     # The root changelog file
     # string
@@ -23,10 +23,20 @@ steps:
     # Required
     url: ""
 
-    # Changeset contexts to match
+    # 
+    # string
+    # Optional
+    changelogParameters: ""
+
+    # Context string to use for filtering
     # string
     # Optional
     contexts: ""
+
+    # 
+    # string
+    # Optional
+    database: ""
 
     # The default catalog name to use for the database connection
     # string
@@ -48,17 +58,22 @@ steps:
     # Optional
     driverPropertiesFile: ""
 
-    # Changeset labels to match
+    # Label expression to use for filtering
     # string
     # Optional
     labelFilter: ""
 
-    # The database password
+    # Password to use to connect to the database
     # string
     # Optional
     password: ""
 
-    # The database username
+    # 
+    # bool
+    # Optional
+    skipDatabaseStep: ""
+
+    # Username to use to connect to the database
     # string
     # Optional
     username: ""
@@ -75,7 +90,7 @@ The liquibase changelog sync to tag action accepts all valid liquibase global op
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/changelog-sync-to-tag@v4.21.0
+  - uses: liquibase-github-actions/changelog-sync-to-tag@v4.21.1
     with:
       changelogFile: ""
       tag: ""
