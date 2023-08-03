@@ -23,20 +23,10 @@ steps:
     # Required
     url: ""
 
-    # 
-    # string
-    # Optional
-    changelogParameters: ""
-
     # Context string to use for filtering
     # string
     # Optional
     contexts: ""
-
-    # 
-    # string
-    # Optional
-    database: ""
 
     # The default catalog name to use for the database connection
     # string
@@ -67,11 +57,6 @@ steps:
     # string
     # Optional
     password: ""
-
-    # 
-    # bool
-    # Optional
-    skipDatabaseStep: ""
 
     # Username to use to connect to the database
     # string
