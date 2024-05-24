@@ -6,7 +6,7 @@ Marks all undeployed changesets as executed, up to a tag
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/changelog-sync-to-tag@v4.27.0
+- uses: liquibase-github-actions/changelog-sync-to-tag@v4.28.0
   with:
     # The root changelog file
     # string
@@ -75,7 +75,7 @@ The liquibase changelog sync to tag action accepts all valid liquibase global op
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/changelog-sync-to-tag@v4.27.0
+  - uses: liquibase-github-actions/changelog-sync-to-tag@v4.28.0
     with:
       changelogFile: ""
       tag: ""
